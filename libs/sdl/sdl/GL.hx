@@ -962,11 +962,16 @@ class GL {
 
 	public static inline var NONE                           = 0;
 
+	public static inline var FRAMEBUFFER_UNDEFINED          		   = 0x8219;
 	public static inline var FRAMEBUFFER_COMPLETE                      = 0x8CD5;
 	public static inline var FRAMEBUFFER_INCOMPLETE_ATTACHMENT         = 0x8CD6;
 	public static inline var FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x8CD7;
 	public static inline var FRAMEBUFFER_INCOMPLETE_DIMENSIONS         = 0x8CD9;
+	public static inline var FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER		   = 0x8CDB;
+	public static inline var FRAMEBUFFER_INCOMPLETE_READ_BUFFER		   = 0x8CDC;
 	public static inline var FRAMEBUFFER_UNSUPPORTED                   = 0x8CDD;
+	public static inline var FRAMEBUFFER_INCOMPLETE_MULTISAMPLE 	   = 0x8D56;
+	public static inline var FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS 	   = 0x8DA8;
 
 	public static inline var FRAMEBUFFER_BINDING            = 0x8CA6;
 	public static inline var RENDERBUFFER_BINDING           = 0x8CA7;

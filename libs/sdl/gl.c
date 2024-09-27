@@ -433,6 +433,10 @@ HL_PRIM void HL_NAME(gl_delete_framebuffer)( vdynamic *f ) {
 	glDeleteFramebuffers(1, &ff);
 }
 
+HL_PRIM int HL_NAME(gl_check_framebuffer_status)(int target) {
+	return glCheckFramebufferStatus(target);
+}
+
 HL_PRIM void HL_NAME(gl_read_pixels)( int x, int y, int width, int height, int format, int type, vbyte *data ) {
 	glReadPixels(x, y, width, height, format, type, data);
 }
@@ -783,6 +787,7 @@ DEFINE_PRIM(_VOID,gl_framebuffer_texture,_I32 _I32 _NULL(_I32) _I32);
 DEFINE_PRIM(_VOID,gl_framebuffer_texture2d,_I32 _I32 _I32 _NULL(_I32) _I32);
 DEFINE_PRIM(_VOID,gl_framebuffer_texture_layer,_I32 _I32 _NULL(_I32) _I32 _I32);
 DEFINE_PRIM(_VOID,gl_delete_framebuffer,_NULL(_I32));
+DEFINE_PRIM(_I32, gl_check_framebuffer_status, _I32);
 DEFINE_PRIM(_VOID,gl_read_pixels,_I32 _I32 _I32 _I32 _I32 _I32 _BYTES);
 DEFINE_PRIM(_VOID,gl_read_buffer,_I32);
 DEFINE_PRIM(_VOID,gl_draw_buffers,_I32 _BYTES);
