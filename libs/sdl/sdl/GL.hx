@@ -304,6 +304,10 @@ class GL {
 	public static function deleteFramebuffer( f : Framebuffer ) {
 	}
 
+	public static function checkFramebufferStatus(target: Int): Int{
+		return -1;
+	}
+
 	public static function readBuffer( mode : Int ) {
 	}
 
@@ -376,6 +380,9 @@ class GL {
 	// uniforms
 
 	public static function uniform1i( u : Uniform, i : Int ) {
+	}
+
+	public static function uniform2fv( u : Uniform, buffer : hl.Bytes, bufPos : Int, count : Int ){
 	}
 
 	public static function uniform4fv( u : Uniform, buffer : hl.Bytes, bufPos : Int, count : Int ) {
