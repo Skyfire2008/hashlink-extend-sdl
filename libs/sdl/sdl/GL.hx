@@ -382,6 +382,12 @@ class GL {
 	public static function uniform1i( u : Uniform, i : Int ) {
 	}
 
+	public static function uniform1f( u : Uniform, i : hl.F32 ) {
+	}
+
+	public static function uniform1fv( u : Uniform, buffer : hl.Bytes, bufPos : Int, count : Int ){
+	}
+
 	public static function uniform2fv( u : Uniform, buffer : hl.Bytes, bufPos : Int, count : Int ){
 	}
 
@@ -698,6 +704,7 @@ class GL {
 	public static inline var RG                             = 0x8227;
 	public static inline var RGB                            = 0x1907;
 	public static inline var RGBA                           = 0x1908;
+	public static inline var RGBA_INTEGER 					= 0x8D99;
 	public static inline var LUMINANCE                      = 0x1909;
 	public static inline var LUMINANCE_ALPHA                = 0x190A;
 
@@ -733,6 +740,7 @@ class GL {
 	public static inline var RGB32F                         = 0x8815;
 	public static inline var RGBA16F                        = 0x881A;
 	public static inline var RGB16F                         = 0x881B;
+	public static inline var RGBA16UI 						= 0x8D76;
 	public static inline var R11F_G11F_B10F                 = 0x8C3A;
 	public static inline var ALPHA16F                       = 0x881C;
 	public static inline var ALPHA32F                       = 0x8816;

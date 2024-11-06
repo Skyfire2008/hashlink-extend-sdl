@@ -547,6 +547,14 @@ HL_PRIM void HL_NAME(gl_uniform1i)( vdynamic *u, int i ) {
 	glUniform1i(u->v.i, i);
 }
 
+HL_PRIM void HL_NAME(gl_uniform1f)(vdynamic* u, float f) {
+	glUniform1f(u->v.i, f);
+}
+
+HL_PRIM void HL_NAME(gl_uniform1fv)(vdynamic* u, vbyte* buffer, int bufPos, int count) {
+	glUniform1fv(u->v.i, count, (float*)buffer + bufPos);
+}
+
 HL_PRIM void HL_NAME(gl_uniform2fv)(vdynamic* u, vbyte* buffer, int bufPos, int count) {
 	glUniform2fv(u->v.i, count, (float*)buffer + bufPos);
 }
@@ -813,6 +821,8 @@ DEFINE_PRIM(_VOID,gl_vertex_attrib_pointer,_I32 _I32 _I32 _BOOL _I32 _I32);
 DEFINE_PRIM(_VOID,gl_vertex_attrib_ipointer,_I32 _I32 _I32 _I32 _I32);
 DEFINE_PRIM(_VOID,gl_delete_buffer,_NULL(_I32));
 DEFINE_PRIM(_VOID,gl_uniform1i,_NULL(_I32) _I32);
+DEFINE_PRIM(_VOID,gl_uniform1f,_NULL(_I32) _F32);
+DEFINE_PRIM(_VOID,gl_uniform1fv,_NULL(_I32) _BYTES _I32 _I32);
 DEFINE_PRIM(_VOID,gl_uniform2fv,_NULL(_I32) _BYTES _I32 _I32);
 DEFINE_PRIM(_VOID,gl_uniform4fv,_NULL(_I32) _BYTES _I32 _I32);
 DEFINE_PRIM(_VOID,gl_uniform_matrix4fv,_NULL(_I32) _BOOL _BYTES _I32 _I32);
